@@ -1,0 +1,40 @@
+buildscript {
+	
+	repositories {
+		// 採用 Maven 公開伺服器，作為 Open Source 函式庫
+		mavenCentral();
+	}
+	
+	dependencies {
+		
+	}
+}
+
+allprojects {
+	// 引用其他 gradle plugin
+	apply plugin: "java";
+	apply plugin: "eclipse";
+	
+	repositories {
+		// 採用 Maven 公開伺服器，作為 Open Source 函式庫
+		mavenCentral();
+	}
+	
+	dependencies {
+		compile("javax.servlet:javax.servlet-api:4.0.1");
+		compile("javax.mail:javax.mail-api:1.6.2");
+		compile("javax.persistence:persistence-api:1.0.2");
+		compile("org.apache.commons:commons-lang3:3.8");
+		compile("org.apache.httpcomponents:httpclient:4.5.6");
+		compile("org.apache.poi:poi:3.9");
+		compile("org.apache.poi:poi-ooxml:3.9");
+		compile("org.jdom:jdom:2.0.2");
+		compile("commons-io:commons-io:2.6");
+		compile("commons-net:commons-net:3.6");
+		compile("com.thoughtworks.xstream:xstream:1.4.10");
+		compile("com.google.code.gson:gson:2.8.5");
+		compile("com.itextpdf:itextpdf:5.5.3");
+		compile("net.sf.json-lib:json-lib:2.4:jdk15");
+		compile("org.springframework:spring-core:5.0.9.RELEASE");
+	}
+}
